@@ -1,5 +1,16 @@
 # CenterNet-Saccade: Enhancing Sonar Object Detection with Lightweight Global Feature Extraction
 
+--------------------------------------------------------------
+Updated on 2024.02.28.
+
+In order to more intuitively verify the effectiveness of E-MHSA, we have updated the code that visualizes E-MHSA.
+
+![img1](./attn_map1.png)
+![img2](./attn_map2.png)
+From these heat maps, we can see that E-MHSA, in addition to focusing on the target, also prominently attends to the shadows of the target, effectively distinguishing the shadows from the surrounding environment.
+
+---------------------------------------------------------------------
+Here is the original text.
 ## Introduction
 
 Sonar imaging technology is widely used in the field of Marine and underwater monitoring because sound waves can be transmitted in the elastic medium of atmosphere and seawater without much interference. In underwater object detection, due to the unique characteristics of the monitored sonar image, and the target in the image is often accompanied by its shadow, we can use the relative relationship between the shadow and the target for detection. To make use of shadow information aided detection and realize the goal in sonar image accurate real-time detection, we put forward a network based on a light-weight module. By using the attention mechanism with global receptive field, the network can make the target pay attention to the shadow information in the global environment, and because of its exquisite design, the computation of the network is greatly reduced.  Specifically, we design a ShuffleBlock adapted to Hourglass to make the backbone network lighter. The idea of CNN dimension reduction is applied to MHSA to make it more efficient while paying attention to global features. Finally, the unreasonable distribution method of positive and negative samples by CenterNet is improved. The related simulation experiments are carried out using the proposed sonar object detection dataset. Among them, the experimental results further verify that our improved model has obvious advantages over many existing conventional deep learning models. Moreover, the real-time monitoring performance of our proposed model is more conducive to the implementation in the field of ocean monitoring.
